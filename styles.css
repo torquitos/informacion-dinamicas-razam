@@ -1,0 +1,74 @@
+/* =============================================
+   DINÁMICAS RAZAM — styles.css
+   ============================================= */
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: #0a0a0a;
+  color: #e2e2e2;
+  scroll-behavior: smooth;
+}
+
+/* === Utility Classes === */
+
+.gold-gradient {
+  background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+}
+
+.gold-glow {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+.glass-card {
+  background: rgba(30, 32, 32, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* === Animations === */
+
+.badge-glow {
+  animation: badgePulse 2s infinite ease-in-out;
+}
+
+@keyframes badgePulse {
+  0%   { box-shadow: 0 0 0px rgba(242, 202, 80, 0); }
+  50%  { box-shadow: 0 0 20px rgba(242, 202, 80, 0.4); }
+  100% { box-shadow: 0 0 0px rgba(242, 202, 80, 0); }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.05) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* === Material Symbols === */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* === Reveal on Scroll === */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
